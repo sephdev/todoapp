@@ -1,0 +1,19 @@
+<h1>Todo App</h1>
+
+<%= link_to "New Todo", new_todo_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+
+  <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.title %></td>
+      <td><%= todo.description %></td>
+      <td><%= link_to "Show", todo_path(todo) %></td>
+    </tr>
+  <% end %>
+</table>
